@@ -7,6 +7,6 @@ use crate::time_summary::TimeSummary;
 #[serde(untagged)]
 pub enum SessionLogEntry {
     ChatMessage(ChatMessage),
-    ChatGpt{chat_gpt: ChatGptEntry},
-    TimeSummary(TimeSummary),
+    ChatGpt { chat_gpt: ChatGptEntry },
+    TimeSummary { time_summary_s: TimeSummary },
 }
