@@ -49,4 +49,6 @@ fn main() {
               serde_json::to_string_pretty(&tool_call).unwrap(),
               tool_call,
     );
+    let chat_message = chat_message::ChatMessage::default();
+    println!("ChatMessage {}", serde_json::to_string_pretty(&chat_message).unwrap());
 }
