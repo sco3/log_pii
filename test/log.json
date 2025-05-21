@@ -1,0 +1,51 @@
+[
+  {
+    "role": "user",
+    "content": "Here is the transcript"
+  },
+  {
+    "role": "assistant",
+    "content": "Based on the provided transcript, there is very limited information to conduct"
+  },
+  {
+    "chat_gpt": {
+      "request": {
+        "chat_history": [
+          {
+            "role": "system",
+            "content": "You are a helping agent analysing user-assistant conversations."
+          },
+          {
+            "role": "user",
+            "content": "Here is the transcript of the conversation you are helping with"
+          }
+        ],
+        "functions": [],
+        "model": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+        "gpt_client": "anthropic.claude-3-5-sonnet-20240620-v1:0"
+      },
+      "response": {
+        "agent": "helping_agent",
+        "message": {
+          "content": "Based on the provided transcript, there is very limited information to conduct a",
+          "role": "assistant",
+          "tool_calls": []
+        }
+      },
+      "time": 8.305584796937183
+    }
+  },
+  {
+    "time_summary_s": {
+      "total_function_times": {
+        "timestamp": 1747671346.887008,
+        "retrieve_state": 0,
+        "get_rules": 0,
+        "get_groups": 0,
+        "get_devices": 0,
+        "get_response": 8.305584796937183
+      },
+      "total_request_time": 8.305584796937183
+    }
+  }
+]

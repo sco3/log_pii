@@ -5,6 +5,7 @@ mod property;
 mod parameters;
 mod function;
 mod tool_call;
+mod chat_message;
 
 use session_log_entry::SessionLogEntry;
 use total_function_times::TotalFunctionTimes;
