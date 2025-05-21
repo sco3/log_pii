@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 use serde::{Deserialize, Serialize};
-use crate::property::Property;
+use crate::serde::property::Property;
 #[derive(Clone, Debug, Serialize, Deserialize, Default)]
 pub struct Parameters {
     pub type_field: Option<String>,

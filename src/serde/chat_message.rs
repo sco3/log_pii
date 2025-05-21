@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use crate::tool_call::ToolCall;
+use crate::serde::tool_call::ToolCall;
 
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ChatMessage {

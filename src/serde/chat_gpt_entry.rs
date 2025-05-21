@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
-use crate::chat_request::ChatRequest;
-use crate::chat_response::ChatResponse;
+use crate::serde::chat_request::ChatRequest;
+use crate::serde::chat_response::ChatResponse;
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct ChatGptEntry {

@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use crate::function::Function;
+use crate::serde::function::Function;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ToolCall {
     pub index: i64,

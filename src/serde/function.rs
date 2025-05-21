@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use crate::parameters::Parameters;
+use crate::serde::parameters::Parameters;
 
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct Function {

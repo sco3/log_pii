@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use crate::chat_message::ChatMessage;
+use crate::serde::chat_message::ChatMessage;
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct ChatResponse {
