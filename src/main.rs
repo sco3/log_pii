@@ -3,12 +3,14 @@ mod total_function_times;
 mod time_summary;
 mod property;
 mod parameters;
+mod function;
 
 use session_log_entry::SessionLogEntry;
 use total_function_times::TotalFunctionTimes;
 use crate::parameters::Parameters;
 use crate::time_summary::TimeSummary;
 use maplit::hashmap;
+use crate::function::Function;
 
 fn main() {
     let log_entry = SessionLogEntry {};
@@ -23,12 +25,18 @@ fn main() {
     let property = property::Property::default();
     println!("{}", serde_json::to_string(&property).unwrap());
 
-    let parameter = Parameters {
+    let parameters = Parameters {
         properties: Some(hashmap! {
             "a1".to_string() => property.clone()
         }),
         required: vec!["a1".to_string()].into(),
         ..Default::default()
     };
-    println!("{}", serde_json::to_string_pretty(&parameter).unwrap());
+    println!("{}", serde_json::to_string_pretty(&parameters).unwrap());
+
+    let function = Function {
+        parameters: Some(parameters.clone()),
+        ..Default::default()
+    };
+    println!("{}", serde_json::to_string_pretty(&function).unwrap());
 }
