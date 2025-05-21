@@ -3,8 +3,8 @@ use crate::total_function_times::TotalFunctionTimes;
 
 #[derive(Debug, Serialize, Deserialize, Default)]
 pub struct TimeSummary {
-    total_function_times: TotalFunctionTimes,
-    total_request_time: f64,
+    pub total_function_times: TotalFunctionTimes,
+    pub total_request_time: f64,
 }
 
 

@@ -3,6 +3,6 @@ use crate::chat_message::ChatMessage;
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct ChatResponse {
-    agent: String,
-    message: ChatMessage,
+    pub agent: String,
+    pub message: ChatMessage,
 }

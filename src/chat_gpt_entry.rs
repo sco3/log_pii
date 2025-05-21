@@ -4,7 +4,7 @@ use crate::chat_response::ChatResponse;
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct ChatGptEntry {
-    request: ChatRequest,
-    response: ChatResponse,
-    time: f64,
+    pub request: ChatRequest,
+    pub response: ChatResponse,
+    pub time: f64,
 }

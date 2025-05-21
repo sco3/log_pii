@@ -3,8 +3,8 @@ use crate::chat_message::ChatMessage;
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct ChatRequest {
-    chat_history: Vec<ChatMessage>,
-    functions: Vec<serde_json::Value>, // Placeholder, define if needed
-    model: String,
-    gpt_client: String,
+    pub chat_history: Vec<ChatMessage>,
+    pub functions: Vec<serde_json::Value>, // Placeholder, define if needed
+    pub model: String,
+    pub gpt_client: String,
 }

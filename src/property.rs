@@ -6,6 +6,6 @@ use crate::total_function_times::TotalFunctionTimes;
 
 pub struct Property {
     #[serde(rename = "type")]
-    type_: String,
-    description: String,
+    pub type_: String,
+    pub description: String,
 }
