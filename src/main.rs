@@ -12,14 +12,17 @@ use maplit::hashmap;
 
 fn main() {
     let log_entry = SessionLogEntry {};
-    let log_entry_str = serde_json::to_string(&log_entry).unwrap();
-    println!("{}", log_entry_str);
+    println!("{}", serde_json::to_string(&log_entry).unwrap());
+
     let total_f_times = TotalFunctionTimes::default();
     println!("{}", serde_json::to_string(&total_f_times).unwrap());
+
     let time_summary = TimeSummary::default();
     println!("{}", serde_json::to_string(&time_summary).unwrap());
+
     let property = property::Property::default();
     println!("{}", serde_json::to_string(&property).unwrap());
+
     let parameter = Parameters {
         properties: Some(hashmap! {
             "a1".to_string() => property.clone()
