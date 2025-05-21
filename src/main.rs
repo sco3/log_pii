@@ -4,6 +4,7 @@ mod time_summary;
 mod property;
 mod parameters;
 mod function;
+mod tool_call;
 
 use session_log_entry::SessionLogEntry;
 use total_function_times::TotalFunctionTimes;
@@ -11,6 +12,7 @@ use crate::parameters::Parameters;
 use crate::time_summary::TimeSummary;
 use maplit::hashmap;
 use crate::function::Function;
+use crate::tool_call::ToolCall;
 
 fn main() {
     let log_entry = SessionLogEntry {};
@@ -39,4 +41,11 @@ fn main() {
         ..Default::default()
     };
     println!("{}", serde_json::to_string_pretty(&function).unwrap());
+
+    let tool_call = ToolCall::default();
+    println!( //
+              "ToolCall: {}\n{:?}",  //
+              serde_json::to_string_pretty(&tool_call).unwrap(),
+              tool_call,
+    );
 }
